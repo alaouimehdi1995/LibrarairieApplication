@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/web/index.html</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/src/java/LibApp/Controllers/AuthentificationServlet.java</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/web/index.jsp</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/web/AccueilAdherent.jsp</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/src/java/LibApp/DAO/BookDAO.java</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/src/java/LibApp/DAO/AdherentDAO.java</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/src/java/LibApp/Controllers/BookServlet.java</file>
+            <file>file:/C:/Users/l.IsSaM.l/Documents/NetBeansProjects/AppLibraririe/src/java/LibApp/Factory/ConnectionFactory.java</file>
         </group>
     </open-files>
 </project-private>

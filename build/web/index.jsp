@@ -1,84 +1,47 @@
-<%@ page import="Beans.BookBean" %>
-<%@ page import="Beans.Book" %>
-<%@ page import="java.util.Iterator" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: zGuindouOS
-  Date: 12/12/2016
-  Time: 22:49
-  To change this template use File | Settings | File Templates.
+<%-- 
+    Document   : index
+    Created on : 26 déc. 2016, 22:09:19
+    Author     : l.IsSaM.l
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!DOCTYPE html>
 <html>
-<head>
-  <title>LibApp</title>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>BienVenue Chez Nous !</title>
+        
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="css/styles.css" />
+        
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
 
-<body>
-<h1>LibApp</h1>
-<form action="books" method="POST">
-  <table>
-    <tr><td><input type="text" name="CodeBook" value="" placeholder="Code Livre">       </td>   </tr>
-    <tr><td><input type="text" name="TitreBook" value="" placeholder="Titre Livre">     </td>   </tr>
-    <tr><td><input type="text" name="AuteurBook" value="" placeholder="Auteur">         </td>   </tr>
-    <tr><td><input type="text" name="CategorieBook" placeholder="Categorie">            </td>   </tr>
-    <tr><td><input type="number" name="CopierNumberBook" placeholder="Nombre de Copies">   </td>   </tr>
-    <tr>
-      <td><input type="reset" value="Reset"></td>
-      <td><input type="submit" value="Ajouter"></td>
-    </tr>
-  </table>
-</form>
+		<div id="formContainer">
+			<form id="login" method="post" action="Authentification">
+				<a href="#" id="flipToRecover" class="flipLink">ISSAM</a>
+                                <input type="text" name="login" id="loginEmail" placeholder="LoGin" />
+				<input type="password" name="password" id="loginPass" placeholder="Pass" />
+                               
+				<input type="submit" name="submit" value="OK" />
+			</form>
+        <form id="recover" method="post" action="./">
+				<a href="" id="flipToLogin" class="flipLink">GHANOUCH</a>
+				<input type="text" name="recoverEmail" id="recoverEmail" value="Email" />
+				<input type="submit" name="submit" value="Recover" />
+			</form>
+		</div>
 
-<br><br><br>
+        <footer>
+	        <h2><i>Vous Pouvez nous </i>Contacter !</h2>
+            <a class="tzine" href="www.gmail.com">GHANOUCH <i>STAIM<b>.</b>LUCK@</i>GMAIL.COM</a>
+        </footer>
+        
+        <!-- JavaScript includes -->
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/script.js"></script>
 
-<h1>Books</h1>
-
-<%
-  BookBean books;
-  if(request.getAttribute("model") != null)
-  {
-    books = (BookBean) request.getAttribute("model");
-  }
-  else books = new BookBean();
-%>
-
-<table border="1">
-  <tr>
-    <th>ID</th>
-    <th>Code</th>
-    <th>Titre</th>
-    <th>Auteur</th>
-    <th>Categorie</th>
-    <th>Nombre de copie</th>
-  </tr>
-  <%
-    Iterator<Book> bList = books.getBooks().iterator();
-    while(bList.hasNext()) {
-      Book b = bList.next();
-  %>
-  <tr>
-
-    <td><%=b.getIdBook()%></td>
-    <td><%=b.getCodeBook()%></td>
-    <td><%=b.getTitreBook()%></td>
-    <td><%=b.getAuteurBook()%></td>
-    <td><%=b.getCategorieBook()%></td>
-    <td><%=b.getNombreCopieBook()%></td>
-    <td>
-      <form action="books" method="POST">
-        <input type="hidden" name="idBook" value="<%=b.getIdBook()%>">
-        <input type="hidden" name="supp" value="Supprimer">
-        <input type="submit" value="Supprimer" />
-      </form>
-    </td>
-    <%
-      }
-    %>
-  </tr>
-</table>
-
-</body>
+    </body>
 </html>
